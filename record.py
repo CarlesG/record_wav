@@ -6,7 +6,7 @@ Script for recording audio from a device
 import datetime
 import time
 import sounddevice as sd
-
+import soundfile as sf
 
 with open('log.txt', 'a') as log_file:
     start_time = datetime.datetime.now().strftime("[%Y%m%d_%H%M%S]")
@@ -20,7 +20,7 @@ location = 'BCA'
 system_device = 'JETSON'
 extension = '.wav'
 fs = 44100 # sample rate
-duration_on = 5 * (60) # duration of recording
+duration_on = 10  # duration of recording
 duration_off =  2
 list_devices = sd.query_devices()
 #-------------------------
@@ -38,7 +38,11 @@ while True:
     date_end = datetime.datetime.now().strftime("%Y%m%d_%H%M%S_%f")
     time.sleep(duration_off)
     with open('log.txt', 'a') as log_file:
+        data_recorded = sd.rec(int(duration_on * fs), fs, channels = 1, blocking = True)
+        sf.write(file_name, data_recorded, fs)
         data_log = "   - Start time: " + date_start + " -- " + "End time: " + date_end
         log_file.write(data_log + "\n")     
         print("   - Start time: " + date_start + " -- " + "End time: " + date_end)
     log_file.close()
+    sd.wait(int(duration_off))
+    
