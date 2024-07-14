@@ -16,7 +16,7 @@ with open('log.txt', 'a') as log_file:
 log_file.close()
 
 # %%-----INPUT VARIABLES-----
-location = 'BCA' 
+location = 'BCA'
 system_device = 'JETSON'
 extension = '.wav'
 fs = 44100 # sample rate
