@@ -13,9 +13,9 @@ parser = argparse.ArgumentParser(
                     prog = 'record.py',
                     description = 'Script for record audio:')
 parser.add_argument('--path', required = False,  help = 'path to save', default = './')
-parser.add_argument('t_on', type = float, help = 'T on recording')
-parser.add_argument('t_off', type = float,  help = 'T off of pause')
-parser.add_argument('fs', type = float, help = 'sampling frequency (Hz)')
+parser.add_argument('t_on', type = float, help = 'T on recording [s]')
+parser.add_argument('t_off', type = float,  help = 'T off of pause [s]')
+parser.add_argument('fs', type = int, help = 'sampling frequency (Hz)')
 args = parser.parse_args()
 
 # %%-----INPUT VARIABLES--------
