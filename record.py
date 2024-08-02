@@ -15,6 +15,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument('--path', required = False,  help = 'path to save', default = './')
 parser.add_argument('t_on', type = float, help = 'T on recording')
 parser.add_argument('t_off', type = float,  help = 'T off of pause')
+parser.add_argument('fs', type = float, help = 'sampling frequency (Hz)')
 args = parser.parse_args()
 
 # %%-----INPUT VARIABLES--------
