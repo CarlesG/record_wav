@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/python3
 """
 Script for recording audio from a device
 
