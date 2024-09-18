@@ -15,6 +15,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument('--path', required = False,  help = 'path to save', default = './')
 parser.add_argument('location', help = 'location', default = 'BCA')
 parser.add_argument('system_device', help = 'System: JETSON or WIN', default = 'WIN')
+parser.add_argument('device_sel', type = int,  help = 'Selected input/output device')
 parser.add_argument('t_on', type = float, help = 'T on recording [s]')
 parser.add_argument('t_off', type = float,  help = 'T off of pause [s]')
 parser.add_argument('fs', type = int, help = 'sampling frequency (Hz)')
@@ -24,6 +25,7 @@ args = parser.parse_args()
 path = args.path
 location = args.location 
 system_device = args.system_device 
+device_sel = args.device_sel
 extension = '.wav'
 fs = args.fs 
 duration_on = args.t_on  
@@ -32,7 +34,7 @@ list_devices = sd.query_devices()
 #--------------------------------
 
 # Select the output device
-sd.default.device = 2 
+sd.default.device =  device_sel 
 
 with open(path + 'log.txt', 'a') as log_file:
     start_time = datetime.datetime.now().strftime("[%Y%m%d_%H%M%S]")
@@ -53,4 +55,4 @@ while True:
         print("   [" + str(i) + "] Start time: " + date_start + " -- " + "End time: " + date_end)
         i = i + 1
     log_file.close()
-    time.sleep(int(duration_off) - 2)
+    time.sleep(int(duration_off))
