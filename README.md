@@ -26,5 +26,5 @@ yml and .txt same files
 
 Could be possible to have problems when export some packages. Normally we can solve it with 
 
-`python -m pip install sounddevice`
-`python -m pip install soundfile`
+`python3 -m pip install sounddevice`
+`python3 -m pip install soundfile`
