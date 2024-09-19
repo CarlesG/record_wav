@@ -23,3 +23,8 @@ Important variables for the script are:
 
 Explicit copy spec-file.txt
 yml and .txt same files
+
+Could be possible to have problems when export some packages. Normally we can solve it with 
+
+`python -m pip install sounddevice`
+`python -m pip install soundfile`
