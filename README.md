@@ -18,3 +18,8 @@ Important variables for the script are:
 - t_on: time for record
 - t_off: time off doing nothing
 - fs: frequency sample
+
+# Environmental files:
+
+Explicit copy spec-file.txt
+yml and .txt same files

@@ -1,0 +1,4 @@
+name: record_acu
+channels:
+  - defaults
+prefix: C:\Users\carle\miniconda3\envs\record_acu

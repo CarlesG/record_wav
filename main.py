@@ -4,7 +4,7 @@ import subprocess
 # input variables for script of recording
 system_device = 'WIN'
 location = 'BCA'
-device_sel = 2 
+device_sel = 24
 folder  = "data/"
 t_on = 10 
 t_off = 10 
