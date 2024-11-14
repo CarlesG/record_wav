@@ -21,7 +21,7 @@ Important variables for the script are:
 
 # Executing the program
 
-To execute the main:
+To execute the main `$ main` directly or:
 
 ```python3 main.py```
 
