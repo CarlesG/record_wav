@@ -1,2 +1,4 @@
 *.wav
 .*.swp
+data/*.txt
+data/*.wav

@@ -1,7 +1,18 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 Script for recording audio from a device
-
+record.py can act like a terminal command due to argparse
+The parameters are next:
+    record.py -h : help for the command
+    parameters:
+        --path: path to save files and log.txt file. default: actual directory
+        -h: prints the help
+        location: term for the location (normally 3 characters) 
+        system_device: could be WIN or LIN
+        device_sel: select input/output device 
+        t_on: time recording
+        t_off: time waiting
+        fs: adquisition sample rate
 """
 import datetime
 import time
