@@ -21,7 +21,7 @@ Important variables for the script are:
 
 # Executing the program
 
-To execute the main `$ main` directly or:
+To execute the main `$> main` directly or:
 
 ```python3 main.py```
 
@@ -31,4 +31,4 @@ Also we can do it directly with the terminal
 
 We can use separetely the `record.py` script like terminal command:
 
-```record.py -h --path location system_device device_sel t_on t_off fs```
+```$> record.py -h --path location system_device device_sel t_on t_off fs```
